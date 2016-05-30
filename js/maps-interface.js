@@ -4,7 +4,7 @@ $(document).ready(function() {
   $('#submit').click(function() {
     var username = $('#username').val();
     $('#username').val("");
-    $('.showWeather').text("The city you have chosen is " + city + ".");
+    $('.showUser').text("The user you have chosen is " + username + ".");
     $.get('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=' + apiKey, function(response){
         $('.showWeather').text("The humidity in " + city + " is " + response.main.humidity + "%");
     }).fail(function(error) {
