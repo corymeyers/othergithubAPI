@@ -24,10 +24,10 @@ var lib = require('bower-files')({
     }
   }
 });
-
-gulp.task('greeting', function() {
-  console.log("hi");
-});
+// remove from template?
+// gulp.task('greeting', function() {
+//   console.log("hi");
+// });
 
 gulp.task('concatInterface', function(){
   return gulp.src(['./js/*-interface.js'])
@@ -108,8 +108,6 @@ gulp.task('cssBuild', function() {
     .pipe(gulp.dest('./build/css'))
     .pipe(browserSync.stream());
 });
-
-
 
 gulp.task("build", ['clean'], function(){
   if (buildProduction) {
