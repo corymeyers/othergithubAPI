@@ -18,7 +18,9 @@ $(document).ready(function() {
         console.log(error.responseJSON.message);
       });
 
+//this code will loop through the array of repositories, and push the name and description of each array into a new object, which is then placed into an array.
 
+//This will loop through that new array, and print out "repositoryName + repositoryDescription" as list items.
 
 
 
