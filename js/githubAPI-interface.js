@@ -17,8 +17,9 @@ $(document).ready(function() {
         // for (.name in response) {
         //   console.log(response[0].name)
         // }
-          response.forEach(function(response[0].name) {
-            console.log(response[0].name)
+
+          response.forEach(function(repo) {
+            console.log(repo.name);
           });
 
 
