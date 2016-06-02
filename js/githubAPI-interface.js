@@ -12,19 +12,18 @@ $(document).ready(function() {
       });
 
       $.get('https://api.github.com/users/' + username + '/repos?access_token=' + apiKey).then(function(response){
-        $('.showRepos').text(response);
 
-        // for (.name in response) {
-        //   console.log(response[0].name)
-        // }
+
+
 
           response.forEach(function(repo) {
             console.log(repo.name);
+            $(".showRepos").append("<li><span>" + repo.name + "</span></li>");
+            // $('.showRepos').html("<p>" + repo.name + "</p>");
           });
 
 
 
-        // console.log(response[0].name);
       }).fail(function(error){
         console.log(error.responseJSON.message);
       });
