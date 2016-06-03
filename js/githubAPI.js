@@ -1,6 +1,7 @@
+var apiKey = require('./../.env').apiKey;
 exports.getGit = function(){}
 
-exports.getGit = function() {
+exports.getGit.prototype.getUser = function(username) {
   $.get('https://api.github.com/users/' + username + '?access_token=' + apiKey).then(function(response){
     $('.showUser').text(response.login);
     console.log(response);
