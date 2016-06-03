@@ -1,7 +1,6 @@
-var apiKey = require('./../.env').apiKey;
-var stalker = require("./../js/githubAPI-interface.js").stalker;
+exports.getGit = function(){}
 
-exports.apiBehind = function(stalker) {
+exports.getGit = function() {
   $.get('https://api.github.com/users/' + username + '?access_token=' + apiKey).then(function(response){
     $('.showUser').text(response.login);
     console.log(response);
@@ -18,5 +17,5 @@ exports.apiBehind = function(stalker) {
   }).fail(function(error){
     console.log(error.responseJSON.message);
   });
-  
+
 };
