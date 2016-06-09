@@ -3,14 +3,11 @@ var getGit = require('./../js/githubAPI.js').getGit;
 
 $(document).ready(function() {
   var currentUserObject = new getGit();
-  currentUserObject.getUser();
 
 
-  $('#submit').click(function() {
+  $('#submit').submit(function(event) {
     var username = $('#username').val();
-
-
-
-
+    currentUserObject.getUser(username);
+    event.preventDefault();
   });
 });

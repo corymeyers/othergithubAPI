@@ -7,14 +7,19 @@
     <link rel="stylesheet" href="build/css/styles.css">
     <title>Github API</title>
   </head>
-  <div class="container">
+  <body>
+    <div class="container">
       <h1>Search a user by username</h1>
-      <label for="username">Enter a username:</label>
-      <input id="username" type="text">
-      <button class="btn-success" id="submit">find user</button>
+      <form id="submit">
+        <label for="username">Enter a username:</label>
+        <input id="username" type="text">
+        <button class="btn-success" type="submit">find user</button>
+      </form>
+
       <p>The user you have selected is: <span class="showUser"></span></p>
       <ul class="showRepos"></ul>
       <ul class="showDescription"></ul>
+
     </div>
 
   </body>
