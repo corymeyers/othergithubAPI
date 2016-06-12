@@ -6,8 +6,10 @@ $(document).ready(function() {
 
 
   $('#submit').submit(function(event) {
+    $("ul").empty();
     var username = $('#username').val();
     currentUserObject.getUser(username);
     event.preventDefault();
   });
+
 });
